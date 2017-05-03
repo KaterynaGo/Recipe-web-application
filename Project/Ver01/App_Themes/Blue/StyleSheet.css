@@ -1,0 +1,114 @@
+﻿body {
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    width: 1080px;
+    /*margin-left: 0;
+    margin-right: 0;*/
+}
+
+h1 {
+    font-size: 200%;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.70);
+    background-color: rgba(246, 236, 236, 0.73);
+    /*width: 50%;*/
+}
+
+h2 {
+    font-size: 150%;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.70);
+}
+
+table {
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    width: 90%;
+    border-collapse: collapse;
+    /*background-color: cornflowerblue;*/
+}
+
+
+td {
+    vertical-align: top;
+}
+
+table, th, tr, td {
+    padding: 5px;
+}
+
+th {
+    font-weight: 600;
+    color: rgba(234, 234, 234, 0.83);
+    background-color: rgba(0, 0, 0, 0.62);
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(187, 239, 238, 0.34);
+}
+
+a {
+    /*background-color: chartreuse;*/
+    font-size: 100%;
+    padding: 5px;
+    color: rgba(194, 125, 125, 0.87);
+    /*background-color: rgba(0, 0, 0, 0.87);*/
+    border-radius: 3px;
+}
+
+    a:link, a:visited {
+        text-decoration: none;
+        color: rgba(194, 125, 125, 0.87);
+    }
+
+    a:hover {
+        color: black;
+    }
+
+.Header {
+    background-color: rgba(40, 40, 40, 0.89);
+    height: 50px;
+    width: 100%;
+}
+
+#headerLabel {
+    color: rgba(234, 234, 234, 0.91);
+    font-size: 120%;
+    font-weight: 100;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.Menu {
+    /*top: 160px;
+    left: 15px;*/
+    /*width: 195px;*/
+    /*background-color: #494242;*/
+    /*padding: 5px;*/
+    vertical-align: top;
+    /*margin-top: 15%;*/
+    width: 150px;
+    /*position: absolute;*/
+}
+
+.Content {
+    /*top: 160px;
+    left: 170px;
+    position: absolute;*/
+    width: 840px;
+    vertical-align: top;
+    padding: 5px;
+    padding-left: 20px;
+    background-color: rgba(246, 236, 236, 0.73);
+    border-radius: 5px;
+}
+
+#form_master {
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    width: 960px;
+}
+
+input {
+    /*border-radius: 5px;*/
+}

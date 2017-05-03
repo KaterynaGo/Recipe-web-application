@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form_master" runat="server">
+        <!-- Header -->
+        <div class="Header">
+            <h2 id="headerLabel">Recipe Website :(</h2>
+            <%--<asp:Image ID="Image1" runat="server" ImageUrl="~/Photos/banner.jpg" Width="960" Height="50" />--%>
+        </div>
+
+
+        <asp:Table ID="Table1" runat="server">
+            <asp:TableRow>
+                <asp:TableCell>
+                    <!-- Menu -->
+                    <div class="Menu">
+
+
+                        <asp:LoginView ID="LoginView1" runat="server">
+                            <AnonymousTemplate>
+                                <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                                <br />
+                                <br />
+                                <asp:Menu runat="server">
+                                    <Items>
+                                        <asp:MenuItem Text="Home" NavigateUrl="Default.aspx"></asp:MenuItem>
+                                        <asp:MenuItem Text="Search Recipe" NavigateUrl="SearchRecipe.aspx"></asp:MenuItem>
+                                        <asp:MenuItem Text="Add Recipe" NavigateUrl="AddRecipe.aspx"></asp:MenuItem>
+                                    </Items>
+                                </asp:Menu>
+                            </AnonymousTemplate>
+
+
+                            <LoggedInTemplate>
+                                <asp:LoginName ID="LoginName1" runat="server" FormatString="Welcome, {0}!" /><br />
+                                <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                                <br />
+                                <br />
+                                <asp:Menu runat="server">
+                                    <Items>
+                                        <asp:MenuItem Text="Home" NavigateUrl="Default.aspx"></asp:MenuItem>
+                                        <asp:MenuItem Text="View My Recipes" NavigateUrl="ViewMyRecipe.aspx"></asp:MenuItem>
+                                        <asp:MenuItem Text="Search Recipe" NavigateUrl="SearchRecipe.aspx"></asp:MenuItem>
+                                        <asp:MenuItem Text="Add Recipe" NavigateUrl="AddRecipe.aspx"></asp:MenuItem>
+                                    </Items>
+                                </asp:Menu>
+                            </LoggedInTemplate>
+
+
+                            <RoleGroups>
+                                <asp:RoleGroup Roles="Administrator,Owner">
+                                    <ContentTemplate>
+                                        <asp:LoginName ID="LoginName1" runat="server" FormatString="Welcome, {0}!" /><br />
+                                        <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                                        <br />
+                                        <br />
+                                        <asp:Menu runat="server">
+                                            <Items>
+                                                <asp:MenuItem Text="Home" NavigateUrl="Default.aspx"></asp:MenuItem>
+                                                <asp:MenuItem Text="View My Recipes" NavigateUrl="ViewMyRecipe.aspx"></asp:MenuItem>
+                                                <asp:MenuItem Text="Search Recipe" NavigateUrl="SearchRecipe.aspx"></asp:MenuItem>
+                                                <asp:MenuItem Text="Add Recipe" NavigateUrl="AddRecipe.aspx"></asp:MenuItem>
+                                                <asp:MenuItem Text="Admin Tools" NavigateUrl="AdminTools.aspx"></asp:MenuItem>
+                                                <asp:MenuItem Text="Add Category" NavigateUrl="AddCategory.aspx"></asp:MenuItem>
+                                                <asp:MenuItem Text="Add Cuisine" NavigateUrl="AddCusine.aspx"></asp:MenuItem>
+                                                <asp:MenuItem Text="View All Users" NavigateUrl="AllUsersView.aspx"></asp:MenuItem>
+                                                <asp:MenuItem Text="User Management" NavigateUrl="UserManagement.aspx"></asp:MenuItem>
+                                            </Items>
+                                        </asp:Menu>
+                                    </ContentTemplate>
+                                </asp:RoleGroup>
+                            </RoleGroups>
+                        </asp:LoginView>
+                    </div>
+                </asp:TableCell>
+
+
+                <asp:TableCell>
+                    <!-- Content -->
+                    <div class="Content">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+    </form>
+</body>
+</html>
